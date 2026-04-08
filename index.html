@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sonia Quintana Sanchez – Autoconocimiento, autosanacion, cursos de masajes, programas mentales y libros transformadores.">
+  <title>Sonia Quintana Sanchez | Autoconocimiento & Autosanacion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:#07090f;color:#f0f2f8;-webkit-font-smoothing:antialiased}
+    :root{
+      --p:#2a7fff;--p2:#5a9fff;--p3:#90c0ff;
+      --g:#00c4ff;--g2:#0090cc;
+      --dark:#07090f;--bg2:#0c0f18;--bg3:#10141f;--card:#111520;
+      --border:rgba(42,127,255,.2);--border-soft:rgba(42,127,255,.1);
+      --text:#f0f2f8;--muted:#7a8aaa;--muted2:#4a5a7a;
+      --r:14px;--max:1120px;
+    }
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+    /* ── NAV ── */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;height:66px;
+      background:rgba(7,9,15,.9);backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--border-soft)}
+    nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .nav-logo img{height:38px;width:auto;object-fit:contain}
+    .nav-logo-txt{font-size:.95rem;font-weight:700;color:var(--text)}
+    .nav-logo-txt span{color:var(--p2)}
+    .nav-right{display:flex;align-items:center;gap:4px}
+    .nav-link{padding:8px 14px;border-radius:8px;font-size:.86rem;color:var(--muted);text-decoration:none;transition:all .15s;font-weight:500}
+    .nav-link:hover{color:var(--text);background:rgba(42,127,255,.08)}
+    .nav-cta{padding:9px 22px;border-radius:8px;background:var(--p);color:#fff;font-size:.86rem;font-weight:600;text-decoration:none;margin-left:6px;transition:all .2s;border:none;cursor:pointer;font-family:inherit}
+    .nav-cta:hover{background:#1a6fef;transform:translateY(-1px);box-shadow:0 6px 20px rgba(42,127,255,.35)}
+
+    /* ── HERO ── */
+    .hero{padding:140px 0 90px;position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center}
+    #star-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;width:100%;height:100%}
+    .hero-nebula{position:absolute;inset:0;pointer-events:none;z-index:0;
+      background:radial-gradient(ellipse 55% 50% at 25% 40%,rgba(42,127,255,.12) 0%,transparent 65%),
+        radial-gradient(ellipse 45% 45% at 75% 60%,rgba(0,196,255,.08) 0%,transparent 55%),
+        radial-gradient(ellipse 60% 50% at 50% 10%,rgba(0,90,200,.08) 0%,transparent 60%)}
+    .hero-grid{position:absolute;inset:0;pointer-events:none;z-index:0;
+      background-image:linear-gradient(rgba(42,127,255,.04) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(42,127,255,.04) 1px,transparent 1px);
+      background-size:60px 60px;
+      mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 75%)}
+    .hero .wrap{position:relative;z-index:1}
+    .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(42,127,255,.1);border:1px solid var(--border);color:var(--p2);padding:6px 18px;border-radius:40px;font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:26px}
+    .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--p2);animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .hero h1{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;color:var(--text);margin-bottom:20px}
+    .hero h1 span{background:linear-gradient(135deg,var(--p2),var(--g));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .hero p{font-size:1.02rem;color:var(--muted);line-height:1.75;margin-bottom:34px;font-weight:300}
+    .hero p strong{color:rgba(240,242,248,.75);font-weight:600}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-p{padding:13px 26px;border-radius:10px;background:var(--p);color:#fff;font-weight:700;font-size:.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .2s;border:none;cursor:pointer;font-family:inherit}
+    .btn-p:hover{background:#1a6fef;transform:translateY(-2px);box-shadow:0 8px 24px rgba(42,127,255,.4)}
+    .btn-out{padding:13px 26px;border-radius:10px;background:transparent;color:var(--text);border:1px solid var(--border);font-weight:500;font-size:.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .2s}
+    .btn-out:hover{border-color:var(--p);color:var(--p2)}
+    /* Hero right */
+    .hero-right{display:flex;flex-direction:column;gap:16px}
+    .hero-stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:22px 24px}
+    .hero-stat-n{font-size:2.6rem;font-weight:800;letter-spacing:-.04em;line-height:1;background:linear-gradient(135deg,var(--p2),var(--g));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:5px}
+    .hero-stat-l{font-size:.82rem;color:var(--muted)}
+    .hero-quote{background:var(--card);border:1px solid var(--border);border-left:2px solid var(--p);border-radius:var(--r);padding:20px 22px}
+    .hero-quote p{font-size:.92rem;font-style:italic;color:rgba(240,242,248,.7);line-height:1.65}
+    .hero-quote span{font-size:.74rem;color:var(--muted2);margin-top:8px;display:block}
+
+    /* ── STATS BAR ── */
+    .stats-bar{background:var(--bg2);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);padding:44px 0}
+    .stats-bar .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+    .stat-col{text-align:center;padding:0 20px;border-right:1px solid var(--border-soft)}
+    .stat-col:last-child{border-right:none}
+    .stat-n{font-size:2.6rem;font-weight:800;letter-spacing:-.04em;line-height:1;background:linear-gradient(135deg,var(--p2),var(--g));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:5px}
+    .stat-l{font-size:.82rem;color:var(--muted)}
+
+    /* ── SECTIONS ── */
+    .sec{padding:92px 0}
+    .sec-alt{padding:92px 0;background:var(--bg2)}
+    .sec-lbl{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--p2);margin-bottom:14px;display:block}
+    .sec-h{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-.025em;line-height:1.15;color:var(--text);margin-bottom:14px}
+    .sec-sub{font-size:.98rem;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:52px;font-weight:300}
+    .hdr{margin-bottom:48px}.hdr.c{text-align:center}.hdr.c .sec-sub{margin-left:auto;margin-right:auto}
+
+    /* ── PRODUCTS GRID ── */
+    .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .prod-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all .25s;display:flex;flex-direction:column;cursor:pointer;position:relative}
+    .prod-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--p),var(--g));opacity:0;transition:opacity .25s}
+    .prod-card:hover{transform:translateY(-4px);border-color:var(--p);box-shadow:0 10px 36px rgba(42,127,255,.2)}
+    .prod-card:hover::before{opacity:1}
+    .prod-img{height:120px;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative}
+    .prod-badge{position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:20px;font-size:.67rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+    .badge-curso{background:rgba(42,127,255,.15);color:var(--p3);border:1px solid var(--border)}
+    .badge-programa{background:rgba(0,196,255,.1);color:var(--g);border:1px solid rgba(0,196,255,.2)}
+    .badge-libro{background:rgba(90,159,255,.1);color:var(--p2);border:1px solid var(--border)}
+    .badge-pronto{background:rgba(100,100,120,.1);color:var(--muted);border:1px solid rgba(100,100,120,.2)}
+    .prod-body{padding:18px;flex:1;display:flex;flex-direction:column}
+    .prod-cat{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);margin-bottom:5px}
+    .prod-title{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.3}
+    .prod-desc{font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:14px;flex:1}
+    .prod-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+    .ptag{font-size:.68rem;padding:3px 9px;border-radius:20px;background:rgba(42,127,255,.07);border:1px solid var(--border-soft);color:var(--p3)}
+    .prod-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--border-soft);margin-top:auto}
+    .prod-price{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;background:linear-gradient(135deg,var(--p2),var(--g));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .prod-price-sub{font-size:.72rem;color:var(--muted);-webkit-text-fill-color:var(--muted)}
+    .prod-btn{padding:8px 16px;border-radius:8px;background:var(--p);color:#fff;font-size:.78rem;font-weight:600;border:none;cursor:pointer;font-family:inherit;transition:all .2s}
+    .prod-btn:hover{background:#1a6fef}
+    .prod-btn-out{background:transparent;border:1px solid var(--border);color:var(--muted)}
+    .prod-btn-out:hover{border-color:var(--p);color:var(--p2)}
+
+    /* ── SOBRE SONIA ── */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+    .about-nums{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+    .about-num{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px}
+    .about-num-n{font-size:2rem;font-weight:800;letter-spacing:-.03em;background:linear-gradient(135deg,var(--p2),var(--g));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .about-num-l{font-size:.78rem;color:var(--muted);margin-top:3px}
+    .about-items{display:flex;flex-direction:column;gap:14px}
+    .about-item{display:flex;gap:14px;align-items:flex-start}
+    .about-ico{width:42px;height:42px;border-radius:10px;background:rgba(42,127,255,.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+    .about-item h4{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:3px}
+    .about-item p{font-size:.82rem;color:var(--muted);line-height:1.55}
+
+    /* ── MÉTODO ── */
+    .method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border-soft);border:1px solid var(--border-soft);border-radius:var(--r);overflow:hidden}
+    .method-step{background:var(--card);padding:32px 24px;text-align:center;transition:background .2s}
+    .method-step:hover{background:#141824}
+    .method-n{font-size:2.2rem;font-weight:800;letter-spacing:-.04em;line-height:1;background:linear-gradient(135deg,rgba(42,127,255,.2),rgba(0,196,255,.1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px}
+    .method-step h3{font-size:.94rem;font-weight:700;color:var(--text);margin-bottom:8px}
+    .method-step p{font-size:.82rem;color:var(--muted);line-height:1.6}
+
+    /* ── TESTIMONIOS ── */
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .testi-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:26px;transition:border-color .2s}
+    .testi-card:hover{border-color:var(--p)}
+    .testi-stars{color:var(--p2);font-size:.85rem;letter-spacing:2px;margin-bottom:12px}
+    .testi-text{font-size:.87rem;color:var(--muted);line-height:1.7;margin-bottom:16px;font-style:italic}
+    .testi-name{font-size:.84rem;font-weight:700;color:var(--text)}
+    .testi-role{font-size:.74rem;color:var(--muted2)}
+
+    /* ── FAQ ── */
+    .faq-wrap{max-width:700px;margin:0 auto}
+    .faq-item{border-bottom:1px solid var(--border-soft)}
+    .faq-btn{width:100%;background:none;border:none;color:var(--text);text-align:left;padding:20px 0;font-size:.93rem;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:inherit}
+    .faq-icon{width:26px;height:26px;border-radius:50%;flex-shrink:0;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:var(--p2);transition:all .3s}
+    .faq-item.open .faq-icon{background:var(--p);border-color:var(--p);color:#fff;transform:rotate(45deg)}
+    .faq-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+    .faq-item.open .faq-body{max-height:200px}
+    .faq-body p{font-size:.88rem;color:var(--muted);padding-bottom:20px;line-height:1.7}
+
+    /* ── CTA ── */
+    .cta-sec{background:var(--bg2);border-top:1px solid var(--border-soft);padding:92px 0;text-align:center}
+    .cta-sec h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-.025em;color:var(--text);margin-bottom:14px}
+    .cta-sec h2 span{background:linear-gradient(135deg,var(--p2),var(--g));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .cta-sec p{font-size:.98rem;color:var(--muted);margin-bottom:36px}
+    .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn-wa{padding:13px 26px;border-radius:10px;background:#25D366;color:#fff;font-weight:700;font-size:.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:all .2s}
+    .btn-wa:hover{background:#128C7E;transform:translateY(-2px)}
+
+    /* ── FOOTER ── */
+    footer{background:#050709;border-top:1px solid var(--border-soft);padding:44px 0 28px}
+    .foot-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;padding-bottom:28px;border-bottom:1px solid var(--border-soft)}
+    .foot-brand img{height:40px;width:auto;object-fit:contain;opacity:.8;margin-bottom:8px;display:block}
+    .foot-brand-name{font-size:.95rem;font-weight:700;color:var(--text)}
+    .foot-brand-sub{font-size:.76rem;color:var(--muted2);max-width:240px;margin-top:3px;line-height:1.5}
+    .foot-links{display:flex;gap:20px;flex-wrap:wrap}
+    .foot-links a,.foot-links button{color:var(--muted);font-size:.82rem;text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;transition:color .2s}
+    .foot-links a:hover,.foot-links button:hover{color:var(--p2)}
+    .foot-copy{font-size:.76rem;color:var(--muted2);margin-top:22px}
+    .foot-wm{font-size:.7rem;color:var(--muted2);margin-top:3px}
+    .foot-wm a{color:rgba(42,127,255,.45);text-decoration:none}
+
+    /* ── CHAT BTN ── */
+    #chat-btn{position:fixed;bottom:24px;right:24px;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--p),var(--g2));border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(42,127,255,.5);z-index:1000;transition:all .25s;font-size:1.4rem;animation:pulse 3s infinite}
+    @keyframes pulse{0%,100%{box-shadow:0 6px 24px rgba(42,127,255,.5)}50%{box-shadow:0 6px 36px rgba(42,127,255,.8),0 0 0 10px rgba(42,127,255,.07)}}
+    #chat-btn:hover{transform:scale(1.1);animation:none}
+    #chat-window{display:none;position:fixed;bottom:94px;right:24px;width:380px;max-width:calc(100vw - 40px);height:560px;background:var(--bg3);border:1px solid var(--border);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.6);z-index:999;flex-direction:column;overflow:hidden;animation:chatIn .25s ease}
+    @keyframes chatIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    #chat-head{background:linear-gradient(135deg,var(--p),#1a5fcc 60%,var(--g2));padding:16px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+    .ch-left{display:flex;align-items:center;gap:10px}
+    .ch-av{width:36px;height:36px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.3);flex-shrink:0;background:#fff;display:flex;align-items:center;justify-content:center}
+    .ch-av img{width:100%;height:100%;object-fit:cover}
+    .ch-name{font-size:.86rem;font-weight:700;color:#fff}
+    .ch-st{font-size:.7rem;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:4px}
+    .ch-dot{width:5px;height:5px;border-radius:50%;background:#a8ffb0;animation:bl 2s infinite}
+    @keyframes bl{0%,100%{opacity:1}50%{opacity:.3}}
+    #chat-x{background:rgba(255,255,255,.15);border:none;color:#fff;width:28px;height:28px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:background .2s}
+    #chat-x:hover{background:rgba(255,255,255,.3)}
+    #chat-msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:#090c14}
+    #chat-msgs::-webkit-scrollbar{width:3px}
+    #chat-msgs::-webkit-scrollbar-thumb{background:rgba(42,127,255,.3);border-radius:2px}
+    .msg{display:flex;animation:mi .22s ease}
+    @keyframes mi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{max-width:83%;padding:10px 14px;border-radius:14px;font-size:.85rem;line-height:1.55}
+    .msg.bot .bubble{background:var(--card);border:1px solid var(--border-soft);color:var(--text);border-bottom-left-radius:3px}
+    .msg.user .bubble{background:linear-gradient(135deg,var(--p),#1a5fcc);color:#fff;border-bottom-right-radius:3px;font-weight:500}
+    .typing-b{background:var(--card);border:1px solid var(--border-soft);padding:12px 16px;border-radius:14px;border-bottom-left-radius:3px;display:flex;gap:4px;align-items:center}
+    .td{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:td 1.2s infinite}
+    .td:nth-child(2){animation-delay:.15s}.td:nth-child(3){animation-delay:.3s}
+    @keyframes td{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+    #qr-wrap{padding:0 12px 10px;display:flex;flex-wrap:wrap;gap:6px;background:#090c14}
+    .qr-btn{background:rgba(42,127,255,.08);border:1px solid var(--border);color:var(--p2);padding:7px 12px;border-radius:20px;font-size:.76rem;cursor:pointer;transition:all .2s;font-family:inherit;font-weight:500}
+    .qr-btn:hover{background:rgba(42,127,255,.2);color:#fff}
+    #chat-bar{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--border-soft);background:var(--bg3)}
+    #chat-in{flex:1;padding:9px 14px;background:var(--card);border:1px solid var(--border-soft);border-radius:8px;color:var(--text);font-family:inherit;font-size:.85rem;outline:none;transition:border-color .2s}
+    #chat-in:focus{border-color:var(--p)}
+    #chat-in::placeholder{color:var(--muted2)}
+    #chat-go{width:38px;height:38px;border-radius:8px;border:none;background:var(--p);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:all .2s;flex-shrink:0}
+    #chat-go:hover{background:#1a6fef}
+    .chat-ft{text-align:center;font-size:.64rem;color:var(--muted2);padding:5px;background:var(--bg3)}
+
+    /* ── MODAL ── */
+    .mo{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:2000;overflow-y:auto;padding:48px 20px;backdrop-filter:blur(8px)}
+    .mbox{max-width:520px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden}
+    .mhead{background:linear-gradient(135deg,var(--p),#1a5fcc 60%,var(--g2));padding:26px 30px;position:relative}
+    .mhead-ico{font-size:2rem;margin-bottom:6px}
+    .mhead h3{font-size:1.3rem;font-weight:800;color:#fff}
+    .mhead p{font-size:.83rem;color:rgba(255,255,255,.7)}
+    .mx{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.15);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center}
+    .mx:hover{background:rgba(255,255,255,.3)}
+    .mbody{padding:26px 30px}
+    .mprice{background:rgba(42,127,255,.07);border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center;margin-bottom:20px}
+    .mprice-main{font-size:2.4rem;font-weight:800;letter-spacing:-.04em;background:linear-gradient(135deg,var(--p2),var(--g));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+    .mprice-per{font-size:.8rem;color:var(--muted);margin-top:4px}
+    .mprice-note{font-size:.75rem;color:var(--p2);margin-top:5px;font-weight:600}
+    .mftitle{font-size:.71rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+    .mflist{list-style:none}
+    .mflist li{font-size:.85rem;color:var(--muted);padding:7px 0;border-bottom:1px solid rgba(42,127,255,.07);display:flex;gap:9px;line-height:1.4}
+    .mflist li:last-child{border-bottom:none}
+    .mflist li::before{content:'checkmark';color:var(--g);font-weight:700;flex-shrink:0;font-size:.8rem}
+    .mwa{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:14px;border-radius:10px;border:none;background:#25D366;color:#fff;font-family:inherit;font-size:.9rem;font-weight:700;cursor:pointer;text-decoration:none;margin-top:20px;transition:all .2s}
+    .mwa:hover{background:#128C7E;transform:translateY(-1px)}
+
+
+    /* ── BOOKING ── */
+    .booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+    .booking-info p{font-size:.97rem;color:var(--muted);line-height:1.75;margin-bottom:20px;font-weight:300}
+    .booking-info ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+    .booking-info ul li{display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--muted)}
+    .booking-info ul li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--p);flex-shrink:0}
+    .booking-info ul li strong{color:var(--text)}
+
+    /* Calendar widget */
+    .cal-box{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+    .cal-header{background:linear-gradient(135deg,var(--p),#1a5fcc 60%,var(--g2));padding:20px 22px;display:flex;align-items:center;justify-content:space-between}
+    .cal-month{font-size:1rem;font-weight:700;color:#fff}
+    .cal-nav{background:rgba(255,255,255,.15);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-family:inherit;transition:background .2s}
+    .cal-nav:hover{background:rgba(255,255,255,.3)}
+    .cal-days-row{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;padding:12px 14px 6px;background:rgba(42,127,255,.04);border-bottom:1px solid var(--border-soft)}
+    .cal-day-name{text-align:center;font-size:.65rem;font-weight:700;color:var(--muted2);padding:4px 0}
+    .cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;padding:12px 14px 16px}
+    .cal-day{text-align:center;padding:9px 4px;border-radius:8px;font-size:.84rem;cursor:pointer;color:var(--muted);transition:all .18s;min-height:36px;display:flex;align-items:center;justify-content:center;border:1px solid transparent}
+    .cal-day.avail{color:var(--text);background:rgba(42,127,255,.07)}
+    .cal-day.avail:hover{background:rgba(42,127,255,.2);color:#fff;border-color:var(--border)}
+    .cal-day.today{border-color:var(--p);color:var(--p2);font-weight:700}
+    .cal-day.selected{background:linear-gradient(135deg,var(--p),#1a5fcc);color:#fff;font-weight:700;border-color:transparent}
+    .cal-day.past,.cal-day.empty,.cal-day.sunday{color:var(--muted2);background:none;cursor:default;opacity:.35}
+    .cal-day.sunday{color:rgba(255,80,80,.5)}
+
+    /* Hours */
+    .hours-box{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:14px}
+    .hours-head{padding:14px 18px;border-bottom:1px solid var(--border-soft);display:flex;align-items:center;justify-content:space-between}
+    .hours-head-txt{font-size:.82rem;font-weight:600;color:var(--text)}
+    .hours-head-date{font-size:.76rem;color:var(--p2)}
+    .hours-turno-lbl{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);padding:10px 18px 6px}
+    .hours-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:0 16px 14px}
+    .hour-btn{background:rgba(42,127,255,.07);border:1px solid var(--border-soft);color:var(--p2);padding:9px 4px;border-radius:9px;font-size:.8rem;cursor:pointer;text-align:center;transition:all .18s;font-family:inherit}
+    .hour-btn:hover{background:rgba(42,127,255,.2);color:#fff;border-color:var(--border)}
+    .hour-btn.sel{background:linear-gradient(135deg,var(--p),#1a5fcc);color:#fff;border-color:transparent;font-weight:700}
+
+    /* Booking form */
+    .booking-form{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:24px;margin-top:14px}
+    .bf-title{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--p2);margin-bottom:16px}
+    .bf-field{margin-bottom:14px}
+    .bf-label{font-size:.76rem;color:var(--muted);margin-bottom:5px;display:block}
+    .bf-in{width:100%;padding:10px 14px;background:#090c14;border:1px solid var(--border-soft);border-radius:8px;color:var(--text);font-family:inherit;font-size:.87rem;outline:none;transition:border-color .2s}
+    .bf-in:focus{border-color:var(--p)}
+    .bf-in::placeholder{color:var(--muted2)}
+    .bf-confirm-card{background:rgba(42,127,255,.06);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:16px}
+    .bf-confirm-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border-soft);font-size:.82rem}
+    .bf-confirm-row:last-child{border-bottom:none}
+    .bf-confirm-lbl{color:var(--muted)}
+    .bf-confirm-val{color:var(--text);font-weight:600}
+    .bf-btn{width:100%;padding:13px;border-radius:9px;border:none;background:var(--p);color:#fff;font-family:inherit;font-size:.9rem;font-weight:700;cursor:pointer;transition:all .2s}
+    .bf-btn:hover{background:#1a6fef;transform:translateY(-1px)}
+    .bf-success{background:rgba(0,196,255,.06);border:1px solid rgba(0,196,255,.2);border-radius:12px;padding:22px;text-align:center}
+    .bf-success-ico{font-size:2.2rem;margin-bottom:10px}
+    .bf-success h3{font-size:1rem;font-weight:700;color:var(--g);margin-bottom:8px}
+    .bf-success p{font-size:.84rem;color:var(--muted);line-height:1.6}
+    .bf-success .call-note{margin-top:12px;padding:10px 12px;background:rgba(42,127,255,.08);border:1px solid var(--border);border-radius:8px;font-size:.78rem;color:var(--p3)}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:960px){
+      .hero-inner{grid-template-columns:1fr}.hero-right{display:none}
+      .prod-grid{grid-template-columns:repeat(2,1fr)}
+      .method-grid{grid-template-columns:repeat(2,1fr);background:none;border:none;gap:14px}
+      .method-step{border:1px solid var(--border);border-radius:var(--r)}
+      .testi-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}
+      .about-grid{grid-template-columns:1fr}
+      .stats-bar .wrap{grid-template-columns:repeat(2,1fr);gap:28px}
+      .stat-col{border-right:none;border-bottom:1px solid var(--border-soft);padding-bottom:20px}
+      .stat-col:nth-child(3),.stat-col:nth-child(4){border-bottom:none}
+      nav .nav-link{display:none}
+    }
+    @media(max-width:600px){
+      .prod-grid{grid-template-columns:1fr}
+      .hero h1{font-size:2.4rem}
+      .wrap{padding:0 18px}
+      .hero{padding:110px 0 70px}
+      .sec,.sec-alt{padding:68px 0}
+    }
+  </style>
+</head>
+<body>
+
+<!-- STARS -->
+<canvas id="star-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;width:100%;height:100%"></canvas>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap">
+    <a href="#" class="nav-logo">
+      <img src="data:image/jpeg;base64,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" alt="Sonia Quintana Sanchez">
+      <span class="nav-logo-txt">Sonia <span>Quintana</span></span>
+    </a>
+    <div class="nav-right">
+      <a href="#servicios" class="nav-link">Servicios</a>
+      <a href="#sobre-mi" class="nav-link">Sobre mi</a>
+      <a href="#metodo" class="nav-link">Metodo</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#citas" class="nav-link">Citas</a>
+      <a href="https://wa.me/34000000000" target="_blank" rel="noopener" class="nav-cta">Contactar</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <canvas id="star-canvas2" style="display:none"></canvas>
+  <div class="hero-nebula"></div>
+  <div class="hero-grid"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">Autoconocimiento &amp; Autosanaci&oacute;n</div>
+        <h1>Tu dolor no es<br><span>para siempre</span></h1>
+        <p>Descubre los c&oacute;digos de tu historia de vida, sana desde dentro y transforma tu realidad. Cursos, programas y libros para que empieces <strong>hoy</strong>.</p>
+        <div class="hero-actions">
+          <a href="#servicios" class="btn-p">Ver cursos y programas &darr;</a>
+          <a href="#sobre-mi" class="btn-out">Conocer a Sonia</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-stat-card"><div class="hero-stat-n">+1.000</div><div class="hero-stat-l">Personas transformadas con el m&eacute;todo SQS</div></div>
+        <div class="hero-quote"><p>&ldquo;Cuando entiendes los c&oacute;digos de tu historia, dejas de repetir patrones y empiezas a crear tu vida.&rdquo;</p><span>— Sonia Quintana S&aacute;nchez</span></div>
+        <div class="hero-stat-card"><div class="hero-stat-n">4</div><div class="hero-stat-l">Formatos: cursos, programas, libros y eventos</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="wrap">
+    <div class="stat-col"><div class="stat-n">+1.000</div><div class="stat-l">Personas acompa&ntilde;adas</div></div>
+    <div class="stat-col"><div class="stat-n">6</div><div class="stat-l">Cursos y programas</div></div>
+    <div class="stat-col"><div class="stat-n">2</div><div class="stat-l">Libros publicados</div></div>
+    <div class="stat-col"><div class="stat-n">100%</div><div class="stat-l">Online, desde casa</div></div>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="sec">
+  <div class="wrap">
+    <div class="hdr c">
+      <span class="sec-lbl">Cursos, Programas &amp; Libros</span>
+      <h2 class="sec-h">Todo lo que necesitas para tu transformaci&oacute;n</h2>
+      <p class="sec-sub">Elige el formato que mejor se adapta a tu momento. Desde formaci&oacute;n en masajes hasta entrenamiento mental profundo.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card" onclick="openProd('masajes')">
+        <div class="prod-img" style="background:linear-gradient(135deg,#0d1a2e,#1a3050)"><span>&#129504;</span><span class="prod-badge badge-curso">Curso Online</span></div>
+        <div class="prod-body">
+          <div class="prod-cat">Masajes &amp; Bienestar</div>
+          <div class="prod-title">Curso de Masajes SQS</div>
+          <div class="prod-desc">T&eacute;cnica completa de masajes con videos, PDF, chat en directo, videollamadas y llamadas de seguimiento personalizadas.</div>
+          <div class="prod-tags"><span class="ptag">&#127916; Videos</span><span class="ptag">&#128196; PDF</span><span class="ptag">&#128222; Llamadas</span><span class="ptag">&#128101; Chat</span></div>
+          <div class="prod-footer"><div class="prod-price">600&euro;<br><span class="prod-price-sub">pago &uacute;nico</span></div><button class="prod-btn">Ver curso</button></div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openProd('codigo')">
+        <div class="prod-img" style="background:linear-gradient(135deg,#0d1a35,#1a2850)"><span>&#127775;</span><span class="prod-badge badge-curso">Curso Online</span></div>
+        <div class="prod-body">
+          <div class="prod-cat">Autoconocimiento</div>
+          <div class="prod-title">C&oacute;digo Ra&iacute;z</div>
+          <div class="prod-desc">Descubre los c&oacute;digos de tu historia de vida. Identifica patrones, comp&eacute;ndenlos y activa los recursos que necesitas para avanzar.</div>
+          <div class="prod-tags"><span class="ptag">&#127916; Videos</span><span class="ptag">&#128196; PDF</span><span class="ptag">&#128101; Chat</span></div>
+          <div class="prod-footer"><div class="prod-price">100&euro;<br><span class="prod-price-sub">pago &uacute;nico</span></div><button class="prod-btn">Ver curso</button></div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openProd('basico')">
+        <div class="prod-img" style="background:linear-gradient(135deg,#0a1e20,#102835)"><span>&#128591;</span><span class="prod-badge badge-curso">Curso Online</span></div>
+        <div class="prod-body">
+          <div class="prod-cat">Formaci&oacute;n B&aacute;sica</div>
+          <div class="prod-title">Masaje Manual B&aacute;sico</div>
+          <div class="prod-desc">Introducci&oacute;n al masaje manual. Ideal para principiantes que quieren aprender t&eacute;cnicas b&aacute;sicas para ellos o su familia.</div>
+          <div class="prod-tags"><span class="ptag">&#127916; Videos</span><span class="ptag">&#128196; PDF</span></div>
+          <div class="prod-footer"><div class="prod-price">60&euro;<br><span class="prod-price-sub">pago &uacute;nico</span></div><button class="prod-btn">Ver curso</button></div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openProd('mental')">
+        <div class="prod-img" style="background:linear-gradient(135deg,#0d1f38,#1a3058)"><span>&#129504;</span><span class="prod-badge badge-programa">Programa SQS</span></div>
+        <div class="prod-body">
+          <div class="prod-cat">Programa Intensivo</div>
+          <div class="prod-title">Entrenamiento Mental C&oacute;digos Ra&iacute;z</div>
+          <div class="prod-desc">Programa completo con seguimiento personalizado. Cambia creencias, h&aacute;bitos y patrones desde la ra&iacute;z con acompa&ntilde;amiento directo.</div>
+          <div class="prod-tags"><span class="ptag">&#127916; Videos</span><span class="ptag">&#128222; Videollamadas</span><span class="ptag">&#128101; Seguimiento</span></div>
+          <div class="prod-footer"><div class="prod-price">300&euro;<br><span class="prod-price-sub">pago &uacute;nico</span></div><button class="prod-btn">Ver programa</button></div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openProd('libro1')">
+        <div class="prod-img" style="background:linear-gradient(135deg,#0d1a30,#182848)"><span>&#128218;</span><span class="prod-badge badge-libro">Libro</span></div>
+        <div class="prod-body">
+          <div class="prod-cat">Biblioteca SQS</div>
+          <div class="prod-title">Tu dolor no es para siempre &mdash; Se&ntilde;ales del universo</div>
+          <div class="prod-desc">Se&ntilde;ales concretas del universo y del alma, y c&oacute;mo pasar a la acci&oacute;n para crear la vida que mereces.</div>
+          <div class="prod-tags"><span class="ptag">&#128218; Libro f&iacute;sico</span></div>
+          <div class="prod-footer"><div class="prod-price">15&euro;</div><button class="prod-btn">Comprar</button></div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openProd('libro2')">
+        <div class="prod-img" style="background:linear-gradient(135deg,#0f1828,#1a2840)"><span>&#128218;</span><span class="prod-badge badge-libro">Libro</span></div>
+        <div class="prod-body">
+          <div class="prod-cat">Biblioteca SQS</div>
+          <div class="prod-title">Tu dolor no es para siempre &mdash; Gu&iacute;a para encaminar tu vida</div>
+          <div class="prod-desc">Una gu&iacute;a pr&aacute;ctica para dejar de repetir errores y tomar decisiones desde el autoconocimiento.</div>
+          <div class="prod-tags"><span class="ptag">&#128218; Libro f&iacute;sico</span></div>
+          <div class="prod-footer"><div class="prod-price">15&euro;</div><button class="prod-btn">Comprar</button></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:18px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px">
+      <div class="prod-card" style="opacity:.6;cursor:default">
+        <div class="prod-img" style="background:linear-gradient(135deg,#0e0e14,#181820)"><span>&#127956;</span><span class="prod-badge badge-pronto">Pr&oacute;ximamente</span></div>
+        <div class="prod-body"><div class="prod-title">Desbloquea tu misi&oacute;n caminando</div><div class="prod-desc">Inicio del viaje. Muy pronto disponible.</div><div class="prod-footer"><div class="prod-price" style="font-size:1rem;background:none;-webkit-text-fill-color:var(--muted)">Pr&oacute;ximamente</div><button class="prod-btn prod-btn-out" onclick="event.stopPropagation()">Avisarme</button></div></div>
+      </div>
+      <div class="prod-card" style="opacity:.6;cursor:default">
+        <div class="prod-img" style="background:linear-gradient(135deg,#0e0e14,#181820)"><span>&#127939;</span><span class="prod-badge badge-pronto">Pr&oacute;ximamente</span></div>
+        <div class="prod-body"><div class="prod-title">Curso Masaje Deportivo</div><div class="prod-desc">T&eacute;cnicas de masaje aplicadas al deporte. En desarrollo.</div><div class="prod-footer"><div class="prod-price" style="font-size:1rem;background:none;-webkit-text-fill-color:var(--muted)">Pr&oacute;ximamente</div><button class="prod-btn prod-btn-out" onclick="event.stopPropagation()">Avisarme</button></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MI -->
+<section id="sobre-mi" class="sec-alt">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <span class="sec-lbl">Sobre m&iacute;</span>
+        <h2 class="sec-h">Sonia Quintana S&aacute;nchez</h2>
+        <p style="font-size:.97rem;color:var(--muted);line-height:1.75;margin-bottom:18px;font-weight:300">Terapeuta, formadora y autora especializada en autoconocimiento y autosanaci&oacute;n. A trav&eacute;s del <strong style="color:var(--text)">M&eacute;todo SQS</strong> y los <strong style="color:var(--text)">C&oacute;digos Ra&iacute;z</strong> he acompa&ntilde;ado a m&aacute;s de 1.000 personas a sanar desde dentro y transformar su realidad.</p>
+        <p style="font-size:.97rem;color:var(--muted);line-height:1.75;font-weight:300">Mi trabajo combina t&eacute;cnicas de masaje terapéutico, entrenamiento mental y trabajo de creencias para ayudarte a identificar los patrones que te frenan y activar los recursos que ya tienes dentro.</p>
+        <div class="about-nums">
+          <div class="about-num"><div class="about-num-n">+1.000</div><div class="about-num-l">Personas acompa&ntilde;adas</div></div>
+          <div class="about-num"><div class="about-num-n">6</div><div class="about-num-l">Cursos y programas</div></div>
+          <div class="about-num"><div class="about-num-n">2</div><div class="about-num-l">Libros publicados</div></div>
+          <div class="about-num"><div class="about-num-n">100%</div><div class="about-num-l">Online desde casa</div></div>
+        </div>
+      </div>
+      <div class="about-items">
+        <div class="about-item"><div class="about-ico">&#129504;</div><div><h4>Masaje terapéutico</h4><p>T&eacute;cnicas profesionales de masaje manual, quiromasaje y masaje deportivo adaptadas a cada persona.</p></div></div>
+        <div class="about-item"><div class="about-ico">&#127775;</div><div><h4>C&oacute;digos Ra&iacute;z</h4><p>Metodolog&iacute;a propia para identificar los patrones de tu historia de vida y trabajarlos desde la ra&iacute;z.</p></div></div>
+        <div class="about-item"><div class="about-ico">&#129504;</div><div><h4>Entrenamiento mental</h4><p>Reprogramaci&oacute;n mental, cambio de creencias y h&aacute;bitos para una transformaci&oacute;n real y duradera.</p></div></div>
+        <div class="about-item"><div class="about-ico">&#128218;</div><div><h4>Autora</h4><p>Dos libros sobre autoconocimiento y autosanaci&oacute;n disponibles para comprar online.</p></div></div>
+        <div class="about-item"><div class="about-ico">&#127914;</div><div><h4>Eventos en directo</h4><p>Meditaciones, talleres y sesiones grupales para elevar la vibraci&oacute;n y generar cambios profundos.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section id="metodo" class="sec">
+  <div class="wrap">
+    <div class="hdr c">
+      <span class="sec-lbl">C&oacute;mo funciona</span>
+      <h2 class="sec-h">El M&eacute;todo SQS paso a paso</h2>
+      <p class="sec-sub">Un proceso claro y estructurado para acompa&ntilde;arte desde donde est&aacute;s hasta donde quieres llegar.</p>
+    </div>
+    <div class="method-grid">
+      <div class="method-step"><div class="method-n">01</div><h3>Diagn&oacute;stico</h3><p>Identificamos los c&oacute;digos de tu historia: patrones, creencias y bloqueos que te impiden avanzar.</p></div>
+      <div class="method-step"><div class="method-n">02</div><h3>Comprensi&oacute;n</h3><p>Entiendes por qu&eacute; est&aacute;s donde est&aacute;s. Sin juicio, con claridad. El dolor tiene un mensaje que te transforma.</p></div>
+      <div class="method-step"><div class="method-n">03</div><h3>Activaci&oacute;n</h3><p>Activamos los recursos internos: masaje, entrenamiento mental y trabajo de creencias.</p></div>
+      <div class="method-step"><div class="method-n">04</div><h3>Transformaci&oacute;n</h3><p>Empiezas a crear desde un lugar nuevo. Menos dolor, m&aacute;s claridad, m&aacute;s vida.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="hdr c">
+      <span class="sec-lbl">Resultados reales</span>
+      <h2 class="sec-h">Lo que dicen las personas que lo han vivido</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-text">&ldquo;El Curso C&oacute;digo Ra&iacute;z me cambi&oacute; la perspectiva de todo. Entend&iacute; por qu&eacute; repetia los mismos patrones y por primera vez supe c&oacute;mo salir de ellos.&rdquo;</p><div class="testi-name">Mar&iacute;a G.</div><div class="testi-role">Curso C&oacute;digo Ra&iacute;z</div></div>
+      <div class="testi-card"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-text">&ldquo;El Entrenamiento Mental SQS es lo m&aacute;s completo que he hecho. El seguimiento de Sonia es incre&iacute;ble, te sientes acompa&ntilde;ada en todo momento.&rdquo;</p><div class="testi-name">Laura M.</div><div class="testi-role">Programa SQS</div></div>
+      <div class="testi-card"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-text">&ldquo;El libro lo le&iacute; de una sentada. Es como si Sonia te hablara directamente a ti. Muy recomendable para cualquier momento de la vida.&rdquo;</p><div class="testi-name">Ana R.</div><div class="testi-role">Libro SQS</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="sec">
+  <div class="wrap">
+    <div class="hdr c"><span class="sec-lbl">FAQ</span><h2 class="sec-h">Preguntas frecuentes</h2><p class="sec-sub">Todo lo que necesitas saber antes de empezar.</p></div>
+    <div class="faq-wrap">
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">Por d&oacute;nde empiezo si no conozco el m&eacute;todo SQS?<span class="faq-icon">+</span></button><div class="faq-body"><p>Lo m&aacute;s recomendable es empezar por el Curso C&oacute;digo Ra&iacute;z (100&euro;). Es el punto de entrada perfecto al m&eacute;todo SQS. Si tienes dudas el Agente IA puede orientarte.</p></div></div>
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">Los cursos son online? Puedo hacerlos a mi ritmo?<span class="faq-icon">+</span></button><div class="faq-body"><p>S&iacute;, todos los cursos y programas son 100% online. Accedes al contenido en cualquier momento. Los programas con videollamadas se coordinan directamente con Sonia.</p></div></div>
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">Qu&eacute; diferencia hay entre el Curso C&oacute;digo Ra&iacute;z y el Entrenamiento Mental?<span class="faq-icon">+</span></button><div class="faq-body"><p>El Curso C&oacute;digo Ra&iacute;z (100&euro;) es el punto de entrada: comprendes tu historia y tus patrones. El Entrenamiento Mental (300&euro;) va m&aacute;s lejos con seguimiento personalizado y videollamadas con Sonia.</p></div></div>
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">Necesito saber de masajes para hacer el Curso SQS?<span class="faq-icon">+</span></button><div class="faq-body"><p>No. Est&aacute; dise&ntilde;ado para todos los niveles. Si eres principiante, el Curso Masaje Manual B&aacute;sico (60&euro;) es el mejor punto de partida.</p></div></div>
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">C&oacute;mo puedo contactar con Sonia directamente?<span class="faq-icon">+</span></button><div class="faq-body"><p>Puedes contactar por WhatsApp o a trav&eacute;s del Agente IA de esta web. Respondemos en horario laboral habitualmente el mismo d&iacute;a.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CITAS -->
+<section id="citas" class="sec-alt">
+  <div class="wrap">
+    <div class="hdr">
+      <span class="sec-lbl">Reserva tu cita</span>
+      <h2 class="sec-h">Agenda una consulta con Sonia</h2>
+      <p class="sec-sub">Elige el d&iacute;a y hora que mejor te venga. Sonia confirmar&aacute; la cita por WhatsApp.</p>
+    </div>
+    <div class="booking-grid">
+      <!-- Left: info -->
+      <div class="booking-info">
+        <p>Las sesiones de consulta son <strong>online por videollamada</strong>. Sonia te acompa&ntilde;ar&aacute; personalmente para orientarte sobre el programa o servicio m&aacute;s adecuado para ti.</p>
+        <ul>
+          <li><strong>Duraci&oacute;n:</strong> 30-45 minutos</li>
+          <li><strong>Formato:</strong> Videollamada o llamada telef&oacute;nica</li>
+          <li><strong>Horario:</strong> Lunes a viernes 9:00 &ndash; 20:00</li>
+          <li><strong>Confirmaci&oacute;n:</strong> Sonia te llamar&aacute; para confirmar</li>
+          <li><strong>Sin coste:</strong> Primera consulta gratuita</li>
+        </ul>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px">
+          <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--p2);margin-bottom:10px">Horario disponible</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="font-size:.8rem;color:var(--muted);background:rgba(42,127,255,.07);border:1px solid var(--border-soft);padding:4px 12px;border-radius:20px">Lun &ndash; Vie</span>
+            <span style="font-size:.8rem;color:var(--text);font-weight:600;background:rgba(42,127,255,.07);border:1px solid var(--border-soft);padding:4px 12px;border-radius:20px">9:00 &ndash; 20:00</span>
+            <span style="font-size:.8rem;color:rgba(255,80,80,.6);background:rgba(255,80,80,.06);border:1px solid rgba(255,80,80,.1);padding:4px 12px;border-radius:20px">S&aacute;b &ndash; Dom cerrado</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: calendar + form -->
+      <div>
+        <div class="cal-box" id="cal-box">
+          <div class="cal-header">
+            <button class="cal-nav" onclick="calPrev()">&#8249;</button>
+            <span class="cal-month" id="cal-month-lbl"></span>
+            <button class="cal-nav" onclick="calNext()">&#8250;</button>
+          </div>
+          <div class="cal-days-row" id="cal-day-names"></div>
+          <div class="cal-days" id="cal-days-grid"></div>
+        </div>
+
+        <div class="hours-box" id="hours-box" style="display:none">
+          <div class="hours-head">
+            <span class="hours-head-txt">Horarios disponibles</span>
+            <span class="hours-head-date" id="hours-date-lbl"></span>
+          </div>
+          <div class="hours-turno-lbl">Ma&ntilde;ana</div>
+          <div class="hours-grid" id="hours-manana"></div>
+          <div class="hours-turno-lbl">Tarde</div>
+          <div class="hours-grid" id="hours-tarde"></div>
+        </div>
+
+        <div class="booking-form" id="booking-form" style="display:none">
+          <div class="bf-title">Tus datos para la cita</div>
+          <div id="bf-confirm-summary"></div>
+          <div class="bf-field"><label class="bf-label">Nombre completo</label><input class="bf-in" id="bf-nombre" type="text" placeholder="Tu nombre"></div>
+          <div class="bf-field"><label class="bf-label">Tel&eacute;fono</label><input class="bf-in" id="bf-tel" type="tel" placeholder="Tu n&uacute;mero de tel&eacute;fono"></div>
+          <div class="bf-field"><label class="bf-label">Motivo de consulta (opcional)</label><input class="bf-in" id="bf-motivo" type="text" placeholder="Ej: Informaci&oacute;n sobre Curso C&oacute;digo Ra&iacute;z"></div>
+          <button class="bf-btn" onclick="submitBooking()">Solicitar cita &rarr;</button>
+        </div>
+
+        <div class="booking-form" id="booking-success" style="display:none">
+          <div class="bf-success">
+            <div class="bf-success-ico">&#127919;</div>
+            <h3>Solicitud enviada!</h3>
+            <p>Tu cita para el <strong id="bs-fecha"></strong> a las <strong id="bs-hora"></strong> ha sido registrada.</p>
+            <div class="call-note">&#128222; Sonia te <strong>llamar&aacute; al n&uacute;mero que indicaste</strong> para confirmar la cita. Comprueba que el tel&eacute;fono est&eacute; disponible.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+  <div class="wrap">
+    <h2>Empieza tu proceso <span>hoy mismo</span></h2>
+    <p>Sin esperas. El Agente IA est&aacute; disponible ahora para orientarte.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/34000000000" target="_blank" rel="noopener" class="btn-wa">
+        <svg width="16" height="16" viewBox="0 0 32 32"><path fill="currentColor" d="M16 2C8.268 2 2 8.268 2 16c0 2.49.638 4.83 1.757 6.865L2 30l7.331-1.724A13.916 13.916 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z"/></svg>
+        WhatsApp directo
+      </a>
+      <button onclick="toggleChat()" class="btn-out">&#129504; Hablar con el Agente IA</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img src="data:image/jpeg;base64,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" alt="Sonia Quintana Sanchez">
+        <div class="foot-brand-name">Sonia Quintana S&aacute;nchez</div>
+        <div class="foot-brand-sub">Autoconocimiento &amp; Autosanaci&oacute;n &mdash; M&eacute;todo SQS</div>
+      </div>
+      <div class="foot-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre m&iacute;</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://www.soniaquintanasanchez.com" target="_blank">Web original</a>
+      </div>
+    </div>
+    <div class="foot-copy">&copy; <span id="yr"></span> Sonia Quintana S&aacute;nchez. Todos los derechos reservados.</div>
+    <div class="foot-wm">Web creada por <a href="https://whitemoon.es" target="_blank">WhiteMoon Agencia de IA</a></div>
+  </div>
+</footer>
+
+<!-- CHAT BTN -->
+<button id="chat-btn" onclick="toggleChat()">&#129504;</button>
+
+<!-- CHAT WINDOW -->
+<div id="chat-window">
+  <div id="chat-head">
+    <div class="ch-left">
+      <div class="ch-av"><img src="data:image/jpeg;base64,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" alt="Sonia"></div>
+      <div><div class="ch-name">Agente IA &middot; SQS</div><div class="ch-st"><span class="ch-dot"></span> En l&iacute;nea ahora</div></div>
+    </div>
+    <button id="chat-x" onclick="toggleChat()">&#10005;</button>
+  </div>
+  <div id="chat-msgs"></div>
+  <div id="qr-wrap"></div>
+  <div id="chat-bar">
+    <input id="chat-in" type="text" placeholder="Escribe tu pregunta..." autocomplete="off">
+    <button id="chat-go" onclick="send()">&#8593;</button>
+  </div>
+  <div class="chat-ft">Agente IA &middot; Sonia Quintana S&aacute;nchez</div>
+</div>
+
+<!-- MODAL -->
+<div id="prod-modal" class="mo" onclick="closeProdOut(event)">
+  <div class="mbox">
+    <div class="mhead"><div class="mhead-ico" id="pm-ico"></div><h3 id="pm-title"></h3><p id="pm-sub"></p><button class="mx" onclick="closeProd()">&#10005;</button></div>
+    <div class="mbody" id="pm-body"></div>
+  </div>
+</div>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// ── STARS ──
+(function(){
+  var c=document.getElementById('star-canvas'),ctx=c.getContext('2d'),stars=[],shooters=[],t=0;
+  function resize(){c.width=window.innerWidth;c.height=window.innerHeight;}
+  function init(){stars=[];for(var i=0;i<220;i++)stars.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.4+.15,a:Math.random()*.6+.1,sp:Math.random()*.006+.002,ph:Math.random()*Math.PI*2,col:Math.random()>.8?'rgba(90,159,255,A)':Math.random()>.6?'rgba(0,196,255,A)':'rgba(255,255,255,A)'});}
+  setInterval(function(){shooters.push({x:Math.random()*c.width*.7,y:Math.random()*c.height*.4,len:Math.random()*100+50,sp:Math.random()*7+4,a:1,ang:Math.PI/5+Math.random()*.3});},3500);
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);t+=.012;
+    stars.forEach(function(s){var a=s.a*(.5+.5*Math.sin(t*s.sp*60+s.ph));ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=s.col.replace('A',a.toFixed(3));ctx.fill();});
+    for(var i=shooters.length-1;i>=0;i--){var s=shooters[i];var dx=Math.cos(s.ang)*s.len,dy=Math.sin(s.ang)*s.len;var g=ctx.createLinearGradient(s.x,s.y,s.x+dx,s.y+dy);g.addColorStop(0,'rgba(255,255,255,0)');g.addColorStop(1,'rgba(180,210,255,'+s.a+')');ctx.beginPath();ctx.moveTo(s.x,s.y);ctx.lineTo(s.x+dx,s.y+dy);ctx.strokeStyle=g;ctx.lineWidth=1.2;ctx.stroke();s.x+=Math.cos(s.ang)*s.sp;s.y+=Math.sin(s.ang)*s.sp;s.a-=.023;if(s.a<=0)shooters.splice(i,1);}
+    requestAnimationFrame(draw);
+  }
+  resize();init();draw();
+  window.addEventListener('resize',function(){resize();init();});
+})();
+
+function toggleFaq(btn){var item=btn.parentElement,open=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});if(!open)item.classList.add('open');}
+
+// ── PRODUCTOS ──
+var PRODS={
+  masajes:{ico:'&#129504;',title:'Curso de Masajes SQS',sub:'Curso online completo',price:'600&euro;',period:'Pago &uacute;nico',note:'',features:['Videos detallados de todas las t&eacute;cnicas','Material PDF descargable','Chat en directo con Sonia','Videollamadas de seguimiento','Llamadas de consulta','Acceso de por vida'],wa:'Hola%20Sonia%2C%20me%20interesa%20el%20Curso%20Masajes%20SQS%20(600%E2%82%AC)'},
+  codigo:{ico:'&#127775;',title:'C&oacute;digo Ra&iacute;z',sub:'Descubre los c&oacute;digos de tu historia',price:'100&euro;',period:'Pago &uacute;nico',note:'Punto de entrada recomendado al m&eacute;todo SQS',features:['Videos del m&eacute;todo C&oacute;digos Ra&iacute;z','Material PDF de trabajo','Chat en directo con Sonia','Ejercicios para identificar patrones','Acceso de por vida'],wa:'Hola%20Sonia%2C%20me%20interesa%20el%20Curso%20C%C3%B3digo%20Ra%C3%ADz%20(100%E2%82%AC)'},
+  basico:{ico:'&#128591;',title:'Masaje Manual B&aacute;sico',sub:'Introducci&oacute;n al masaje terapéutico',price:'60&euro;',period:'Pago &uacute;nico',note:'Ideal para principiantes',features:['Videos paso a paso','PDF descargable','Sin conocimientos previos','Perfecto para familia y pareja','Acceso de por vida'],wa:'Hola%20Sonia%2C%20me%20interesa%20el%20Curso%20Masaje%20B%C3%A1sico%20(60%E2%82%AC)'},
+  mental:{ico:'&#129504;',title:'Entrenamiento Mental C&oacute;digos Ra&iacute;z',sub:'Programa SQS de transformaci&oacute;n profunda',price:'300&euro;',period:'Pago &uacute;nico',note:'Incluye seguimiento personalizado con Sonia',features:['Programa completo en video','PDF de trabajo personal','Chat en directo con Sonia','Videollamadas personalizadas','Llamadas incluidas','Seguimiento de h&aacute;bitos y avances'],wa:'Hola%20Sonia%2C%20me%20interesa%20el%20Entrenamiento%20Mental%20(300%E2%82%AC)'},
+  libro1:{ico:'&#128218;',title:'Tu dolor no es para siempre',sub:'Se&ntilde;ales concretas del universo y pase a la acci&oacute;n',price:'15&euro;',period:'Libro f&iacute;sico',note:'',features:['Gu&iacute;a de se&ntilde;ales del universo','T&eacute;cnicas para pasar a la acci&oacute;n','Ejercicios pr&aacute;cticos','Env&iacute;o a domicilio incluido'],wa:'Hola%20Sonia%2C%20quiero%20el%20libro%20Se%C3%B1ales%20(15%E2%82%AC)'},
+  libro2:{ico:'&#128218;',title:'Tu dolor no es para siempre',sub:'Gu&iacute;a para encaminar tu vida',price:'15&euro;',period:'Libro f&iacute;sico',note:'',features:['Gu&iacute;a pr&aacute;ctica de autoconocimiento','C&oacute;mo encaminar tu vida','Herramientas para dejar de repetir errores','Env&iacute;o a domicilio incluido'],wa:'Hola%20Sonia%2C%20quiero%20el%20libro%20Gu%C3%ADa%20(15%E2%82%AC)'}
+};
+function openProd(id){
+  var p=PRODS[id];
+  document.getElementById('pm-ico').innerHTML=p.ico;
+  document.getElementById('pm-title').innerHTML=p.title;
+  document.getElementById('pm-sub').innerHTML=p.sub;
+  var nota=p.note?'<div class="mprice-note">'+p.note+'</div>':'';
+  document.getElementById('pm-body').innerHTML=
+    '<div class="mprice"><div class="mprice-main">'+p.price+'</div><div class="mprice-per">'+p.period+'</div>'+nota+'</div>'+
+    '<div class="mftitle">Qu&eacute; incluye</div>'+
+    '<ul class="mflist">'+p.features.map(function(f){return '<li>'+f+'</li>';}).join('')+'</ul>'+
+    '<a href="https://wa.me/34000000000?text='+p.wa+'" target="_blank" class="mwa"><svg width="16" height="16" viewBox="0 0 32 32"><path fill="currentColor" d="M16 2C8.268 2 2 8.268 2 16c0 2.49.638 4.83 1.757 6.865L2 30l7.331-1.724A13.916 13.916 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z"/></svg>Contactar para adquirirlo</a>';
+  document.getElementById('prod-modal').style.display='block';
+  document.body.style.overflow='hidden';
+}
+function closeProd(){document.getElementById('prod-modal').style.display='none';document.body.style.overflow='';}
+function closeProdOut(e){if(e.target.id==='prod-modal')closeProd();}
+
+// ── CHATBOT ──
+var chatOpen=false,inited=false;
+function toggleChat(){chatOpen=!chatOpen;document.getElementById('chat-window').style.display=chatOpen?'flex':'none';if(chatOpen&&!inited){inited=true;initChat();}if(chatOpen)setTimeout(function(){document.getElementById('chat-in').focus();},300);}
+function initChat(){botSay('Hola! Soy el <b>Agente IA</b> de Sonia Quintana.<br>Puedo orientarte hacia el curso o programa m&aacute;s adecuado para ti. &iquest;Qu&eacute; buscas?',['Por d&oacute;nde empezar','Ver precios','Informaci&oacute;n masajes','Hablar con Sonia'],600);}
+function addMsg(who,html){var c=document.getElementById('chat-msgs');var d=document.createElement('div');d.className='msg '+who;var b=document.createElement('div');b.className='bubble';b.innerHTML=html;d.appendChild(b);c.appendChild(d);c.scrollTop=c.scrollHeight;}
+function showTyping(){var c=document.getElementById('chat-msgs');var d=document.createElement('div');d.className='msg bot';d.id='typing';var b=document.createElement('div');b.className='typing-b';b.innerHTML='<div class="td"></div><div class="td"></div><div class="td"></div>';d.appendChild(b);c.appendChild(d);c.scrollTop=c.scrollHeight;}
+function hideTyping(){var t=document.getElementById('typing');if(t)t.remove();}
+function setQR(arr){var w=document.getElementById('qr-wrap');w.innerHTML='';arr.forEach(function(l){var b=document.createElement('button');b.className='qr-btn';b.textContent=l.replace(/&[^;]+;/g,'');b.onclick=function(){handleReply(l);};w.appendChild(b);});}
+function botSay(html,qrs,delay){if(!qrs)qrs=[];if(!delay)delay=800;showTyping();setTimeout(function(){hideTyping();addMsg('bot',html);if(qrs.length)setQR(qrs);else setQR([]);},delay);}
+function handleReply(text){setQR([]);addMsg('user',text.replace(/&[^;]+;/g,'').replace(/<[^>]+>/g,''));processInput(text);}
+function processInput(t){
+  var tl=t.toLowerCase().replace(/&[^;]+;/g,'');
+  if(tl.indexOf('empezar')!==-1||tl.indexOf('donde')!==-1||tl.indexOf('empiezo')!==-1){
+    botSay('Para empezar con el m&eacute;todo SQS lo ideal es:<br><br>&#127775; <b>C&oacute;digo Ra&iacute;z &mdash; 100&euro;</b><br>Identificar&aacute;s los patrones de tu historia y entender&aacute;s desde d&oacute;nde viene tu dolor.<br><br>Si tu inter&eacute;s es el masaje, empieza por el <b>Curso B&aacute;sico (60&euro;)</b>.',['Ver Codigo Raiz 100€','Ver Masaje Basico 60€','Ver todos los precios']);
+  } else if(tl.indexOf('precio')!==-1||tl.indexOf('cuanto')!==-1){
+    botSay('<b>Precios actuales:</b><br><br>&#128591; Masaje B&aacute;sico &mdash; <b>60&euro;</b><br>&#127775; C&oacute;digo Ra&iacute;z &mdash; <b>100&euro;</b><br>&#129504; Entrenamiento Mental &mdash; <b>300&euro;</b><br>&#129504; Curso Masajes SQS &mdash; <b>600&euro;</b><br>&#128218; Libros &mdash; <b>15&euro; c/u</b>',['Por donde empezar','Hablar con Sonia']);
+  } else if(tl.indexOf('masaje')!==-1||tl.indexOf('manual')!==-1){
+    botSay('Tenemos <b>2 cursos de masaje</b>:<br><br>&#128591; <b>Masaje B&aacute;sico &mdash; 60&euro;</b><br>Para principiantes. Sin experiencia previa.<br><br>&#129504; <b>Curso Masajes SQS &mdash; 600&euro;</b><br>Completo y profesional con seguimiento.',['Quiero Masaje Basico 60€','Quiero Curso SQS 600€']);
+  } else if(tl.indexOf('mental')!==-1||tl.indexOf('programa')!==-1||tl.indexOf('entrenamiento')!==-1){
+    botSay('<b>Entrenamiento Mental C&oacute;digos Ra&iacute;z &mdash; 300&euro;</b><br><br>El programa m&aacute;s completo de Sonia. Reprogramaci&oacute;n mental con videollamadas y seguimiento personalizado.',['Quiero este programa','Antes el Codigo Raiz','Hablar con Sonia']);
+  } else if(tl.indexOf('libro')!==-1){
+    botSay('Sonia tiene <b>2 libros</b> a 15&euro; cada uno:<br><br>&#128218; Se&ntilde;ales del universo<br>&#128218; Gu&iacute;a para encaminar tu vida<br><br>Perfectos para conectar con el m&eacute;todo.',['Quiero un libro','Los quiero los dos']);
+  } else if(tl.indexOf('sonia')!==-1||tl.indexOf('contactar')!==-1||tl.indexOf('hablar')!==-1||tl.indexOf('whatsapp')!==-1){
+    window.open('https://wa.me/34000000000?text=Hola%20Sonia%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n','_blank');
+    botSay('Abriendo WhatsApp con Sonia...');
+  } else {
+    botSay('Soy el Agente IA de Sonia. Puedo orientarte sobre cursos, precios y programas.',['Por d&oacute;nde empezar','Ver precios','Hablar con Sonia']);
+  }
+}
+document.getElementById('chat-go').onclick=function(){var i=document.getElementById('chat-in');var t=i.value.trim();if(!t)return;i.value='';handleReply(t);};
+document.getElementById('chat-in').addEventListener('keypress',function(e){if(e.key==='Enter'){var i=document.getElementById('chat-in');var t=i.value.trim();if(!t)return;i.value='';handleReply(t);}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeProd();});
+
+// ── CALENDAR BOOKING ──
+var MESES=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+var DIAS=['Lu','Ma','Mi','Ju','Vi','Sa','Do'];
+var calY=0,calM=0,selDay=0,selHora='',selFechaStr='';
+
+// Horas disponibles (9:00 - 20:00, cada 30min, excluyendo almuerzo 14:00-15:30)
+var HORAS_MANANA=['09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30'];
+var HORAS_TARDE=['15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30'];
+
+function initCal(){
+  var now=new Date();
+  calY=now.getFullYear();calM=now.getMonth();
+  renderCal();
+}
+function calPrev(){calM--;if(calM<0){calM=11;calY--;}renderCal();}
+function calNext(){calM++;if(calM>11){calM=0;calY++;}renderCal();}
+
+function renderCal(){
+  document.getElementById('cal-month-lbl').textContent=MESES[calM]+' '+calY;
+  // Day names
+  var dn=document.getElementById('cal-day-names');dn.innerHTML='';
+  DIAS.forEach(function(d){var s=document.createElement('div');s.className='cal-day-name';s.textContent=d;dn.appendChild(s);});
+  // Days
+  var grid=document.getElementById('cal-days-grid');grid.innerHTML='';
+  var firstDay=new Date(calY,calM,1).getDay();
+  var offset=(firstDay===0)?6:firstDay-1;
+  var daysInMonth=new Date(calY,calM+1,0).getDate();
+  var today=new Date();today.setHours(0,0,0,0);
+  for(var i=0;i<offset;i++){var e=document.createElement('div');e.className='cal-day empty';grid.appendChild(e);}
+  for(var d=1;d<=daysInMonth;d++){
+    (function(day){
+      var el=document.createElement('div');
+      var thisDate=new Date(calY,calM,day);thisDate.setHours(0,0,0,0);
+      var dow=thisDate.getDay();// 0=sun,6=sat
+      var isPast=thisDate<today;
+      var isWeekend=(dow===0||dow===6);
+      var isToday=thisDate.getTime()===today.getTime();
+      el.textContent=day;
+      if(isPast||isWeekend){
+        el.className='cal-day'+(isWeekend?' sunday':' past');
+      } else {
+        el.className='cal-day avail'+(isToday?' today':'')+(selDay===day&&new Date(calY,calM).getTime()===new Date(calY,calM).getTime()?' selected':'');
+        if(selDay===day){el.classList.add('selected');}
+        el.onclick=function(){
+          selDay=day;
+          var dayNames=['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+          selFechaStr=dayNames[dow]+' '+day+' de '+MESES[calM]+' '+calY;
+          renderCal();
+          showHours();
+        };
+      }
+      grid.appendChild(el);
+    })(d);
+  }
+}
+
+function showHours(){
+  var hb=document.getElementById('hours-box');hb.style.display='block';
+  document.getElementById('hours-date-lbl').textContent=selFechaStr;
+  // Reset
+  selHora='';
+  document.getElementById('booking-form').style.display='none';
+  renderHours('hours-manana',HORAS_MANANA);
+  renderHours('hours-tarde',HORAS_TARDE);
+  hb.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function renderHours(containerId,horas){
+  var c=document.getElementById(containerId);c.innerHTML='';
+  horas.forEach(function(h){
+    var btn=document.createElement('button');btn.className='hour-btn'+(selHora===h?' sel':'');
+    btn.textContent=h;
+    btn.onclick=function(){
+      selHora=h;
+      renderHours('hours-manana',HORAS_MANANA);
+      renderHours('hours-tarde',HORAS_TARDE);
+      showBookingForm();
+    };
+    c.appendChild(btn);
+  });
+}
+
+function showBookingForm(){
+  var bf=document.getElementById('booking-form');bf.style.display='block';
+  document.getElementById('bf-confirm-summary').innerHTML=
+    '<div class="bf-confirm-card">'+
+    '<div class="bf-confirm-row"><span class="bf-confirm-lbl">Fecha</span><span class="bf-confirm-val">'+selFechaStr+'</span></div>'+
+    '<div class="bf-confirm-row"><span class="bf-confirm-lbl">Hora</span><span class="bf-confirm-val">'+selHora+'</span></div>'+
+    '<div class="bf-confirm-row"><span class="bf-confirm-lbl">Formato</span><span class="bf-confirm-val">Videollamada / Llamada</span></div>'+
+    '</div>';
+  bf.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function submitBooking(){
+  var nombre=document.getElementById('bf-nombre').value.trim();
+  var tel=document.getElementById('bf-tel').value.trim();
+  var motivo=document.getElementById('bf-motivo').value.trim();
+  if(!nombre){document.getElementById('bf-nombre').focus();return;}
+  if(!tel){document.getElementById('bf-tel').focus();return;}
+  // Show success
+  document.getElementById('booking-form').style.display='none';
+  document.getElementById('booking-success').style.display='block';
+  document.getElementById('bs-fecha').textContent=selFechaStr;
+  document.getElementById('bs-hora').textContent=selHora;
+  // Open WhatsApp
+  var msg='Hola%20Sonia%2C%20quiero%20solicitar%20una%20cita%20para%20el%20'+
+    encodeURIComponent(selFechaStr)+'%20a%20las%20'+selHora+
+    '.%20Nombre%3A%20'+encodeURIComponent(nombre)+
+    '%20Tel%C3%A9fono%3A%20'+encodeURIComponent(tel)+
+    (motivo?'%20Motivo%3A%20'+encodeURIComponent(motivo):'');
+  setTimeout(function(){window.open('https://wa.me/34000000000?text='+msg,'_blank');},600);
+  // Reset for next booking
+  selDay=0;selHora='';selFechaStr='';
+}
+
+// Init calendar on load
+window.addEventListener('load',function(){initCal();});
+
+</script>
+</body>
+</html>
