@@ -781,6 +781,9 @@ function setQR(arr){
     w.appendChild(b);
   });
 }
+function addBotMsg(html){
+  addMsg('bot',html);
+}
 function botSay(html,qrs,delay){
   if(!qrs)qrs=[];if(!delay)delay=800;
   showTyping();
@@ -822,16 +825,42 @@ function processBookingStep(t){
     // Also set form fields
     var elN=document.getElementById('bf-nombre');var elT=document.getElementById('bf-tel');
     if(elN)elN.value=bookingNombre;if(elT)elT.value=bookingTel;
+    // Generate reservation code
+    var codigo='WM-'+Math.random().toString(36).substr(2,4).toUpperCase()+'-'+Math.floor(1000+Math.random()*9000);
+    window._waMsg=msg;window._waCodigo=codigo;
     botSay('Todo listo. Resumen de tu reserva:<br><br>— Servicio: <b>'+bookingServicio+'</b><br>— Nombre: <b>'+bookingNombre+'</b><br>— Teléfono: <b>'+bookingTel+'</b><br><br>Voy a abrir WhatsApp para confirmar con el equipo.',['Confirmar por WhatsApp','Cambiar datos'],800);
-    setTimeout(function(){window.open('https://wa.me/34000000000?text='+msg,'_blank');},1600);
-    // Reset booking state after a moment
-    setTimeout(function(){bookingStep=null;bookingNombre='';bookingTel='';bookingServicio='';},2000);
     return true;
   }
   return false;
 }
 
 function processInput(t){
+  // Handle WhatsApp confirm
+  if(t==='Confirmar por WhatsApp'&&window._waMsg){
+    window.open('https://wa.me/34643199580?text='+window._waMsg,'_blank');
+    setTimeout(function(){
+      // Show confirmation card
+      var cod=window._waCodigo||'WM-????';
+      addBotMsg('<div style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.3);border-radius:14px;padding:16px;margin:4px 0">'+
+        '<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">'+
+        '<svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>'+
+        '<span style="font-weight:700;color:#86efac;font-size:.88rem">¡Reserva enviada!</span></div>'+
+        '<div style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.25);border-radius:10px;padding:12px;text-align:center;margin-bottom:12px">'+
+        '<div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.12em;color:#9d5fff;margin-bottom:4px">Código de reserva</div>'+
+        '<div style="font-size:1.3rem;font-weight:900;color:#c084fc;letter-spacing:.1em">'+cod+'</div>'+
+        '<div style="font-size:.65rem;color:#8888b0;margin-top:4px">Guarda este código para consultas</div></div>'+
+        '<p style="font-size:.78rem;color:#8888b0;line-height:1.65;text-align:center">Hemos recibido tu solicitud. <strong style="color:#f0eeff">Te llamaremos en menos de 1 hora</strong> para confirmar todos tus datos y finalizar la reserva.</p>'+
+        '</div>');
+      window._waMsg=null;window._waCodigo=null;
+      bookingStep=null;bookingNombre='';bookingTel='';bookingServicio='';
+    },800);
+    return;
+  }
+  if(t==='Cambiar datos'&&bookingStep){
+    bookingStep='nombre';
+    botSay('Sin problema. ¿Cuál es tu nombre?',[],400);
+    return;
+  }
   // If we're mid-booking flow, handle that first
   if(bookingStep&&bookingStep!=='done'){
     if(processBookingStep(t))return;
